@@ -39,9 +39,7 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  if (value === null) return false;
-  if (typeof value === 'string') return true;
-  return false;
+  return Object.prototype.toString.call(value) === '[object String]';
 }
 
 /**
